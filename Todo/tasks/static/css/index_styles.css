@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+    color: #333;
+}
+
+/* Main container for the to-do list */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+h1 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Task list items */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Task text, strikethrough for completed tasks */
+.task-item del {
+    color: #888;
+    padding-left: 10px;
+}
+
+.task-item span {
+    font-size: 16px;
+    flex: 1;
+    padding-left: 10px;
+}
+
+.task-item span span {
+    font-size: 16px;
+    flex: 1;
+    padding-left: 5px;
+}
+
+/* Links for update and delete */
+.task-item a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.task-item a:hover {
+    color: #0056b3;
+}

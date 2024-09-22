@@ -1,0 +1,71 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #F44336; /* Red for warning/confirmation */
+    margin-bottom: 20px;
+}
+
+/* Task title in confirmation */
+h3 i {
+    color: #333;
+}
+
+/* Links for cancel */
+a {
+    background-color: #9E9E9E;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #757575;
+}
+
+/* Form styling */
+form {
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: #F44336; /* Red for delete action */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #D32F2F;
+}

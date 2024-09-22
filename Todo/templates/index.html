@@ -5,21 +5,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To-Do</title>
+        <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
     </head>
     <body>
-        <h1>To-Do List</h1>
-        <div>
+        <div class="container">
+            <h1>To-Do List</h1>
             <form method="POST" action="/">
                 {% csrf_token %}
                 {{form.Title}}
                 <input type="submit" value="Submit">
             </form>
+            {% for task in tasks %}
+                <div class="task-item">
+                    <a href="{% url 'update' task.id %}">Update</a>
+                    <a href="{% url 'delete' task.id %}">Delete</a>
+                    {% if task.Done == True %}
+                        <del>{{task.Title}}</del>                        
+                        <span>Done</span>
+                    {% else %}
+                        <span>{{task.Title}} <span>Active</span> </span>
+                    {% endif %}   
+                </div>
+            {%endfor%}
         </div>
-        {% for task in tasks %}
-            <a href="{% url 'update' task.id %}">Update</a>
-            <div>
-                <p>{{task}}</p>
-            </div>
-        {%endfor%}
     </body>
 </html>

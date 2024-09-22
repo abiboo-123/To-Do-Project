@@ -26,5 +26,15 @@ def ubdateTask(request, pk):
             form.save()
             return redirect('/')
     
-    context = {'form': form}
+    context = {'form': form,'task': task}
     return render(request, 'update_task.html', context)
+
+def deleteTask(request, pk):
+    task = models.task.objects.get(id=pk)
+    
+    if request.method == "POST":
+        task.delete()
+        return redirect('/')
+    
+    context = {'task': task}
+    return render(request, 'delete.html', context)
